@@ -5,11 +5,16 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import router from './Routes/Routes.jsx';
+import AuthProvider from './providers/AuthProvider.jsx';
 
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <div className='mx-auto max-w-7xl'>
+    <React.StrictMode>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </React.StrictMode>
+  </div>
 )
